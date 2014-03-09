@@ -1,0 +1,27 @@
+.browser-terminal-menu {
+  position: absolute;
+  top: 1em;
+  left: 1em;
+  padding: 1em;
+  margin: 0;
+  list-style-type: none;
+  font-family: monospace;
+  line-height: 1.5em;
+  font-size: 14px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+.browser-terminal-menu > li {
+  cursor: pointer;
+  margin: 0;
+  padding: 0.025em 0.5em;
+  white-space: pre-wrap;
+}
+
+.browser-terminal-menu > li.non-item {
+  cursor: default;
+}

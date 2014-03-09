@@ -1,0 +1,43 @@
+{
+  "name": "browser-menu",
+  "description": "A browser-friendly implementation of substack's terminal-menu",
+  "version": "0.0.0",
+  "main": "index.js",
+  "browser": "browser.js",
+  "dependencies": {
+    "remove-element": "0.0.0",
+    "vkey": "0.0.3",
+    "insert-css": "^0.1.1",
+    "events": "^1.0.0",
+    "xtend": "^2.1.2",
+    "terminal-menu": "^0.2.0",
+    "brfs": "^1.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "example-browser": "beefy example.js --open",
+    "example-node": "node example.js"
+  },
+  "author": "Hugh Kennedy <hughskennedy@gmail.com> (http://hughsk.io/)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/hughsk/browser-menu"
+  },
+  "browserify": {
+    "transform": "brfs"
+  },
+  "bugs": {
+    "url": "https://github.com/hughsk/browser-menu/issues"
+  },
+  "homepage": "https://github.com/hughsk/browser-menu",
+  "keywords": [
+    "browser",
+    "menu",
+    "terminal",
+    "workshop",
+    "ansi",
+    "80s",
+    "ibm"
+  ]
+}
