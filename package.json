@@ -13,9 +13,13 @@
     "terminal-menu": "^0.2.0",
     "brfs": "^1.0.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "browserify": "^3.32.0",
+    "beefy": "^1.1.0"
+  },
   "scripts": {
-    "example-browser": "beefy example.js --open",
+    "prepublish": "browserify example.js>bundle.js",
+    "example-browser": "beefy example.js:bundle.js --open",
     "example-node": "node example.js"
   },
   "author": "Hugh Kennedy <hughskennedy@gmail.com> (http://hughsk.io/)",
