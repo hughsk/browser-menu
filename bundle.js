@@ -88,7 +88,7 @@ function createMenu(opts) {
 
     items.push(item)
     list.appendChild(item)
-    item.innerText = text
+    item.innerHTML = text
     item.addEventListener('mouseover', mouseover, false)
     item.addEventListener('click', click, false)
 
