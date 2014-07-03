@@ -149,7 +149,7 @@ function createMenu(opts) {
   function select() {
     if (curr === null) return
     if (!items[curr]) return
-    var label = items[curr].innerText
+    var label = items[curr].innerHTML
     menu.emit('select', label)
   }
 
