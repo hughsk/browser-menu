@@ -150,7 +150,7 @@ function createMenu(opts) {
     if (curr === null) return
     if (!items[curr]) return
     var label = items[curr].innerHTML
-    menu.emit('select', label)
+    menu.emit('select', label, curr)
   }
 
   function reset() {
