@@ -177,8 +177,14 @@ function createMenu(opts) {
 
   function keydown(e) {
     if (e.metaKey) return
-    if (e.shiftKey) return
     var key = vkey[e.keyCode] || e.char
+    if (e.shiftKey) {
+      if (key === '<tab>') {
+        key = '<up>'
+      } else {
+        return
+      }
+    }
 
     if (e.ctrlKey) {
       if (key !== 'C') return
