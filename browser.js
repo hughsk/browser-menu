@@ -70,6 +70,7 @@ function createMenu(opts) {
     , '<space>': select
     , '<enter>': select
     , 'Q': close
+    , '<tab>': next
   }
 
   window.addEventListener('keydown', keydown, false)
