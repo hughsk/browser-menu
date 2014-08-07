@@ -1,7 +1,7 @@
 {
   "name": "browser-menu",
   "description": "A browser-friendly implementation of substack's terminal-menu",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "main": "index.js",
   "browser": "browser.js",
   "dependencies": {
