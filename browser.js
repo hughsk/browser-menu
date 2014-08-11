@@ -29,6 +29,8 @@ function createMenu(opts) {
   var list = document.createElement('ul')
   var menu = new Emitter
 
+  menu.setMaxListeners(Infinity)
+
   var latestLineText = ''
   var latestLine = null
   var items = []
