@@ -63,12 +63,12 @@ function createMenu(opts) {
   var keys = {
       '<up>': prev
     , '<left>': prev
-    , 'J': prev
     , 'H': prev
+    , 'K': prev
     , '<down>': next
     , '<right>': next
+    , 'J': next
     , 'L': next
-    , 'K': next
     , '<space>': select
     , '<enter>': select
     , 'Q': close
