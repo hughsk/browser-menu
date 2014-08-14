@@ -1,4 +1,5 @@
 var remove    = require('remove-element')
+var css       = require('insert-css')
 var Emitter   = require('events/')
 var xtend     = require('xtend')
 var vkey      = require('vkey')
@@ -6,7 +7,7 @@ var fs        = require('fs')
 
 module.exports = createMenu
 
-require('insert-css')(
+css(
   fs.readFileSync(__dirname + '/style.css', 'utf8')
 )
 
@@ -46,8 +47,19 @@ function createMenu(opts) {
 
   // styles
   list.classList.add('browser-terminal-menu')
-  list.style.color = opts.fg
-  list.style.backgroundColor = opts.bg
+  css(
+    '.browser-terminal-menu {\n' +
+    '  background-color: ' + opts.bg + ';\n' +
+    '}\n' +
+    '.browser-terminal-menu li {\n' +
+    '  color: ' + opts.fg + ';\n' +
+    '}\n' +
+    '.browser-terminal-menu li.highlighted {\n' +
+    '  color: ' + opts.bg + ';\n' +
+    '  background-color: ' + opts.fg + ';\n' +
+    '}'
+  )
+
 
   if ('x' in opts) list.style.left = opts.x + 'em'
   if ('y' in opts) list.style.top  = opts.y + 'em'
@@ -116,13 +128,11 @@ function createMenu(opts) {
   }
 
   function enable(item) {
-    item.style.backgroundColor = opts.fg
-    item.style.color = opts.bg
+    item.classList.add('highlighted')
   }
 
   function disable(item) {
-    item.style.color = opts.fg
-    item.style.backgroundColor = opts.bg
+    item.classList.remove('highlighted')
   }
 
   function next() {
